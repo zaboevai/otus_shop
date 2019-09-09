@@ -1,24 +1,10 @@
-<!DOCTYPE html>
-<html>
+{% extends 'notebook_shop/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Notebook shop</title>
-    {% load static %}
-</head>
-
-<body>
-
-<ul>
-    <li><a href="../index">На&nbsp;главную</a></li>
-    <li><a href="../catalog">Каталог</a></li>
-    <li><a href="../contacts">Контакты</a></li>
-</ul>
-<hr>
+{% block body %}
 
 <h2>Mi&nbsp;Air&nbsp;13.3</h2>
 <h4>&laquo;Описание товара&raquo;</h4>
-<a href={% static 'notebook_shop/img/mi_air_laptop.jpg' %} target="_blank"><img src={% static 'notebook_shop/img/mi_air_laptop.jpg' %} alt="Mi Air
+<a href={{ Good.object.image.url }} target="_blank"><img src={{ Good.object.image.url }} alt="Mi Air
     13.3"
     width="300"></a>
 <p>
@@ -43,8 +29,4 @@
 <p>
     Темно-серый
 </p>
-<hr>
-<footer> &laquo;Все права защищены&raquo; &copy;&nbsp;2019</footer>
-</body>
-
-</html>
+{% endblock %}
