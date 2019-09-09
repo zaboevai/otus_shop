@@ -10,6 +10,7 @@ class Good(models.Model):
     type = models.IntegerField(choices=TYPES)
     description = models.CharField(max_length=2048)
     created = models.DateField(auto_now_add=True)
+    image = models.ImageField(default='', upload_to='image')
 
     def __str__(self):
         return f' {self.id} {self.name} {self.description} '
