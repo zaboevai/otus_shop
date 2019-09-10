@@ -1,0 +1,12 @@
+{% extends 'notebook_shop/base.html' %}
+
+{% block body %}
+
+    <h3>{{ name }} </h3>
+
+    <a href='{{ url }}'> <img src={{ url }} alt={{ name }} width="300"> </a>
+    <br>
+    <h4>&laquo;Описание товара&raquo;</h4>
+    {{descr}}
+
+{% endblock %}

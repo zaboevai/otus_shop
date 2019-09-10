@@ -124,4 +124,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'notebook_shop/media')
-MEDIA_URL = '/media/'
+MEDIA_URL = '/notebook_shop/media/'

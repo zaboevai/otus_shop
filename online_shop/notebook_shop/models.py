@@ -1,14 +1,14 @@
 from django.db import models
 
 
-class Good(models.Model):
+class Goods(models.Model):
 
     TYPES = ((1, 'Laptops'),
              (2, 'Tablets'))
 
     name = models.CharField(max_length=256)
     type = models.IntegerField(choices=TYPES)
-    description = models.CharField(max_length=2048)
+    description = models.TextField(max_length=2048)
     created = models.DateField(auto_now_add=True)
     image = models.ImageField(default='', upload_to='image')
 
